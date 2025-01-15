@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="/CSS/solutions.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<style>
+.consultation-offerings {
+  padding: 0 5%;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.consulting-title {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.consulting-description {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+.sub-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-family: "McKinsey Sans", "Helvetica Neue", Calibri, Corbel, Helvetica, Roboto, Droid, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .consulting-title {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+
+  .consulting-description,
+  .sub-title,
+  li {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  .columns {
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 1 100%;
+  }
+
+  /* Remove horizontal lines on small screens */
+  .column:not(:last-child) {
+    border-bottom: none;
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+       <!-- Header Section -->
+       <header class="header">
+        <div class="logo">Your Logo</div>
+        <nav>
+            <div class="hamburger" id="hamburger">☰</div>
+            <ul class="nav-links" id="navLinks">
+              <li><a href="/HTML/Index.html">Home</a></li>
+              <li><a href="/HTML/Products.html">Products</a></li>
+              <li><a href="/HTML/solutions.html">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="/HTML/Testimonial.html">Testimonials</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="/HTML/career.html">Careers</a></li>
+              <li><a href="/html/Contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+    </header>
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+      <h1>Our Solutions</h1>
+      <p>Reduce the Cost</p>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content">
+    <p>
+      Asset-based consulting helps us deliver insight and impact quicker than ever. 
+      Our solutions leverage advanced technology, proprietary data, and deep expertise 
+      to help clients in new and exciting ways:
+    </p>
+    <div class="grid">
+      <div class="card">
+        <h3>End-to-End Development</h3>
+        <p>Identify improvement opportunities by benchmarking against peers and best practice.</p>
+      </div>
+      <div class="card">
+        <h3>Staff Augmentation</h3>
+        <p>Provides insight into supply/demand trends and profit pools.</p>
+      </div>
+      <div class="card">
+        <h3>Offshore Team Management</h3>
+        <p>Transforms the way critical business processes are measured and managed.</p>
+      </div>
+      <div class="card">
+        <h3>QA <br>Testing</h3>
+        <p>Improve business outcomes by leveraging big data for better decisions.</p>
+      </div>
+      <div class="card">
+        <h3>3D Design & Rendering</h3>
+        <p>Improve business outcomes by leveraging big data for better decisions.</p>
+      </div>
+      <div class="card">
+        <h3>Technical Support</h3>
+        <p>Providing 24/7 technical support for web, mobile, and XR applications. </p>
+      </div>
+    </div>
+  </section>
+  <section class="value-beyond">
+    <div class="value-beyond-container">
+        <div class="value-beyond-text-column">
+            <h2>Turning Technology Hype into Tangible Business Value</h2>
+            <p>"At Gritbyte Labs, we bridge the gap between ambition and action. Our consultation services focus on helping businesses leverage emerging technologies, from strategy to execution, delivering scalable and impactful results." </p>
+            <a href="your-link.html" class="value-beyond-cta-btn">Get started →</a>
+        </div>
+        <div class="value-beyond-image-column">
+            <img src="/hero.jpg" alt="Value Beyond Image">
+        </div>
+    </div>
+</section>
+<section class="hiring-section">
+    <hr class="section-divider" />
+    <p>CAREERS</p>
+    <div class="columns">
+      <div class="column-left">
+        <img src="/career.jpg" alt="Hiring Image" class="hiring-image" />
+      </div>
+      <div class="column-right">
+        <h2 class="hiring-title">Shape the Future with Gritbyte Labs</h2>
+        <p class="hiring-description">
+          "Join our dynamic team of innovators working on cutting-edge technologies like XR, AI, SaaS, and more.
+        </p>
+        <p class="hiring-call-to-action">
+          At Gritbyte Labs, we foster a collaborative culture that inspires creativity, drives growth, and delivers impact." 
+        </p>
+        <a href="next-page.html" class="learn-more">Learn more →</a>
+      </div>
+    </div>
+  </section>
+  <section class="consultation-offerings">
+    <h2 class="section-title">Our Consultation Offerings</h2>
+  
+    <div class="columns">
+      <div class="column">
+        <h3 class="consulting-title">1. Technology Strategy Development</h3>
+        <p class="consulting-description">Identify the right technologies to meet your unique business goals.</p>
+        <h4 class="sub-title">Services Include:</h4>
+        <ul>
+          <li>Assessing current capabilities and gaps.</li>
+          <li>Recommending scalable and cost-effective solutions.</li>
+          <li>Roadmapping technology adoption for long-term success.</li>
+        </ul>
+      </div>
+      <hr>
+      
+      <div class="column">
+        <h3 class="consulting-title">2. Digital Transformation Planning</h3>
+        <p class="consulting-description">Design comprehensive plans to digitize operations and improve efficiency.</p>
+        <h4 class="sub-title">Focus Areas:</h4>
+        <ul>
+          <li>Legacy system upgrades.</li>
+          <li>Workflow automation using AI and SaaS.</li>
+          <li>Integrating XR for immersive employee training and customer engagement.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="column">
+        <h3 class="consulting-title">3. Emerging Technology Consulting</h3>
+        <p class="consulting-description">Stay ahead of the curve with advice on leveraging cutting-edge innovations like XR, AI, and Generative AI.</p>
+        <h4 class="sub-title">Example Applications:</h4>
+        <ul>
+          <li>AI-Powered Analytics: Improve decision-making with actionable insights.</li>
+          <li>Immersive XR Experiences: Enhance training, marketing, or operations.</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="columns">
+      <div class="column">
+        <h3 class="consulting-title">4. Industry-Specific Solutions</h3>
+        <p class="consulting-description">Tailored recommendations for industries including:</p>
+        <ul>
+          <li>Retail: Personalization with AI and virtual showrooms with XR.</li>
+          <li>Healthcare: Patient management systems and AI diagnostics.</li>
+          <li>Real Estate: 3D property visualizations and customer engagement tools.</li>
+          <li>Manufacturing: Predictive maintenance and XR-based training.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="column">
+        <h3 class="consulting-title">5. Proof of Concept (POC) Development</h3>
+        <p class="consulting-description">Test the feasibility of your ideas with pilot projects before full-scale implementation.</p>
+        <h4 class="sub-title">Benefits:</h4>
+        <ul>
+          <li>Minimize risks associated with new technology investments.</li>
+          <li>Evaluate ROI early in the process.</li>
+        </ul>
+      </div>
+      <hr>
+      <div class="column">
+        <h3 class="consulting-title">6. Implementation Support</h3>
+        <p class="consulting-description">Provide hands-on assistance to ensure smooth technology adoption.</p>
+        <h4 class="sub-title">Services Include:</h4>
+        <ul>
+          <li>Resource planning and deployment.</li>
+          <li>Change management training for your workforce.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <section class="support">
+    <h1>Need technical support for one of our solutions?</h1>
+    <button onclick="location.href='nextpage.html';">
+      <span class="icon">📧</span>
+      Technical Support
+    </button>
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Your Logo</div>
+            <div class="footer-links">
+                <a href="#">Contact Us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Cookie Preferences</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="icon"><i class="fab fa-instagram"></i></a>
+        </div>
+        
+        <div class="footer-bottom">
+            <hr>
+            <p>© 1996-2024 Your Company</p>
+        </div>
+    </footer>
+
+    <!-- hamburger -->
+    <script>
+                // Get the hamburger and nav links elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        // Toggle the 'active' class on the nav menu when hamburger is clicked
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click event from bubbling up to the document
+            navLinks.classList.toggle('show');
+        });
+
+        // Close the hamburger menu if clicked outside of it
+        document.addEventListener('click', (event) => {
+            // Check if the click was outside the hamburger or the nav menu
+            if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+                navLinks.classList.remove('show');
+            }
+        });
+
+    </script>
+    
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+<script>
+    // Initialize the map
+    const map = L.map('map').setView([20.5937, 78.9629], 3); // Center map on India for a global view
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Locations with latitude, longitude, and label
+    const locations = [
+        { name: "Bangalore, India", lat: 12.9716, lon: 77.5946 },
+        { name: "Business Bay, Dubai", lat: 25.2048, lon: 55.2708 },
+        { name: "Toronto, Canada", lat: 43.7, lon: -79.42 },
+        { name: "London, UK", lat: 51.5074, lon: -0.1278 },
+        { name: "Seoul, South Korea", lat: 37.5665, lon: 126.978 },
+    ];
+
+    // Add markers for each location
+    locations.forEach(location => {
+        L.marker([location.lat, location.lon])
+            .addTo(map)
+            .bindPopup(`<b>${location.name}</b>`)
+            .openPopup();
+    });
+</script>
+  
+</body>
+</html>
